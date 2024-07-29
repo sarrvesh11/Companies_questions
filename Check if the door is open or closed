@@ -1,0 +1,22 @@
+import java.util.* ;
+import java.io.*; 
+public class Solution {
+    public static String doorStatus(int n) {
+        // Write your code here.
+        StringBuilder ans=new StringBuilder();
+        for(int i=1;i<=n;i++){
+            if(evenfactors(i)){
+                ans.append('0');
+            }
+            else  
+                ans.append('1');
+        }
+        return ans.toString();
+    }
+   public static boolean evenfactors(int n){
+        int root=(int)Math.sqrt(n);
+        if((root*root)==n)
+            return false;
+        return true;
+    }
+}
